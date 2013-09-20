@@ -24,3 +24,5 @@ mergeSort = { List list ->
  
     merge(left, right)
 }
+
+println (mergeSort([23,76,-99,5.8,97,37,85,99,11,38,95,92,24,46,41,24,14,12,57,78,4]))

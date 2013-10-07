@@ -2,8 +2,8 @@
 // poll() method can be used to remove objects from the queue in FIFO way.  
 
 list =[]
-def q1 = list as Queue
-// println "Default Queue implementation is ${q1.setClass().name}\n"
+q1 = list as Queue
+println "Default Queue implementation is ${q1.getClass().name}\n"
 
 
 q1<<"first"
@@ -26,10 +26,11 @@ println "New queue:" + q;
 q.offer("new inserted string")
 println "After offer:" + q;
 assert q.peek() == "one"
-// assert q.poll() == "two"
-// assert q.poll() == "three"
-// assert q.poll() == "new inserted string"
-println q
+assert q.poll() == "one"
+assert q.poll() == "two"
+println "What's left:" + q;
+assert q.poll() == "new inserted string"
+println "What's left:" + q;
 
 def l = [1, 2, 3] as LinkedList
 println "Linked list:" + l;
